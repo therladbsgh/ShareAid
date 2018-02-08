@@ -8,7 +8,7 @@ Readable = require('readable-stream/readable');
 
 jsonRequest = require('./util').jsonRequest;
 
-const timeout = 50;
+const timeout = 100;
 
 /**
  * Make a request for a Instagram page, parse the response, and get all the
