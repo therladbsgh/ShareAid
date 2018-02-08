@@ -8,6 +8,7 @@ Readable = require('readable-stream/readable');
 
 jsonRequest = require('./util').jsonRequest;
 
+const timeout = 50;
 
 /**
  * Make a request for a Instagram page, parse the response, and get all the
@@ -64,63 +65,65 @@ InstagramPosts = (function(superClass) {
     }
     hasMorePosts = false;
     lastPost = void 0;
-    return getPosts(this.username, this._minPostId).on('error', (function(_this) {
-      return function(err) {
-        return _this.emit('error', err);
-      };
-    })(this)).on('data', (function(_this) {
-      return function(media) {
-        hasMorePosts = true;
-        for(var i in media) {
-          var rawPost = media[i]
-          var post;
-          post = {
-            id: rawPost.code,
-            username: _this.username,
-            time: +rawPost['created_time'],
-            type: rawPost.__typename,
-            likes: rawPost.likes.count,
-            comments: rawPost.comments.count
-          };
-          if (rawPost.caption != null) {
-            post.text = rawPost.caption;
+    return setTimeout(() => {
+      return getPosts(this.username, this._minPostId).on('error', (function(_this) {
+        return function(err) {
+          return _this.emit('error', err);
+        };
+      })(this)).on('data', (function(_this) {
+        return function(media) {
+          hasMorePosts = true;
+          for(var i in media) {
+            var rawPost = media[i]
+            var post;
+            post = {
+              id: rawPost.code,
+              username: _this.username,
+              time: +rawPost['created_time'],
+              type: rawPost.__typename,
+              likes: rawPost.likes.count,
+              comments: rawPost.comments.count
+            };
+            if (rawPost.caption != null) {
+              post.text = rawPost.caption;
+            }
+            switch (post.type) {
+              case 'GraphImage':
+                post.media = rawPost.display_src;
+                break;
+              case 'GraphSidecar':
+                post.media = rawPost.display_src;
+                //.map(function(media) {
+                //   return media[media.images ? 'images' : 'videos']['standard_resolution'].url;
+                // });
+              case 'GraphVideo':
+                post.media = rawPost.display_src;
+                break;
+              default:
+                throw new Error("Instagram did not return a URL for the media on post " + post.id);
+            }
+            _this._minPostId = rawPost.id;
+            if (lastPost != null) {
+              _this.push(lastPost);
+            }
+            lastPost = post;
           }
-          switch (post.type) {
-            case 'GraphImage':
-              post.media = rawPost.display_src;
-              break;
-            case 'GraphSidecar':
-              post.media = rawPost.display_src;
-              //.map(function(media) {
-              //   return media[media.images ? 'images' : 'videos']['standard_resolution'].url;
-              // });
-            case 'GraphVideo':
-              post.media = rawPost.display_src;
-              break;
-            default:
-              throw new Error("Instagram did not return a URL for the media on post " + post.id);
+          return lastPost = post;
+        }
+      })(this)).on('end', (function(_this) {
+        return function() {
+          if (hasMorePosts) {
+            _this._lock = false;
           }
-          _this._minPostId = rawPost.id;
           if (lastPost != null) {
             _this.push(lastPost);
           }
-          lastPost = post;
+          if (!hasMorePosts) {
+            return _this.push(null);
+          }
         }
-        return lastPost = post;
-      }
-    })(this)).on('end', (function(_this) {
-      return function() {
-        if (hasMorePosts) {
-          _this._lock = false;
-        }
-        if (lastPost != null) {
-          _this.push(lastPost);
-        }
-        if (!hasMorePosts) {
-          return _this.push(null);
-        }
-      };
-    })(this));
+      })(this));
+    }, timeout);
   };
 
   InstagramPosts.prototype.destroy = function() {

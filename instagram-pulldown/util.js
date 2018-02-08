@@ -7,7 +7,7 @@ JSONStream = require('JSONStream');
 
 zlib = require('zlib');
 
-jsonRequest = function(jsonSelector, options) {
+jsonRequest = function jsonSelect(jsonSelector, options) {
   var outStream;
   outStream = JSONStream.parse(jsonSelector);
   options.gzip = true;
@@ -22,7 +22,6 @@ jsonRequest = function(jsonSelector, options) {
         return response.pipe(outStream);
       }
     } else {
-      console.log(this)
       return outStream.emit('error', "Instagram returned status code: " + response.statusCode);
     }
   });
