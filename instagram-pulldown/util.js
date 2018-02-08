@@ -22,6 +22,7 @@ jsonRequest = function(jsonSelector, options) {
         return response.pipe(outStream);
       }
     } else {
+      console.log(this)
       return outStream.emit('error', "Instagram returned status code: " + response.statusCode);
     }
   });

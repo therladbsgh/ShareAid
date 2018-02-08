@@ -19,9 +19,8 @@ jsonRequest = require('./util').jsonRequest;
  */
 
 getPosts = function(username, startingId) {
-  console.log(username);
-  return jsonRequest('items.*', {
-    uri: "https://instagram.com/" + username + "/media/",
+  return jsonRequest('user.media.nodes', {
+    uri: "https://instagram.com/" + username + "/?__a=1",
     qs: {
       'max_id': startingId
     }
@@ -70,41 +69,45 @@ InstagramPosts = (function(superClass) {
         return _this.emit('error', err);
       };
     })(this)).on('data', (function(_this) {
-      return function(rawPost) {
-        var post;
+      return function(media) {
         hasMorePosts = true;
-        post = {
-          id: rawPost.code,
-          username: _this.username,
-          time: +rawPost['created_time'],
-          type: rawPost.type,
-          likes: rawPost.likes.count,
-          comments: rawPost.comments.count
-        };
-        if (rawPost.caption != null) {
-          post.text = rawPost.caption.text;
-        }
-        switch (post.type) {
-          case 'image':
-            post.media = rawPost.images['standard_resolution'].url;
-            break;
-          case 'carousel':
-             post.media = rawPost.carousel_media;
-            //.map(function(media) {
-            //   return media[media.images ? 'images' : 'videos']['standard_resolution'].url;
-            // });
-          case 'video':
-            post.media = rawPost.videos;
-            break;
-          default:
-            throw new Error("Instagram did not return a URL for the media on post " + post.id);
-        }
-        _this._minPostId = rawPost.id;
-        if (lastPost != null) {
-          _this.push(lastPost);
+        for(var i in media) {
+          var rawPost = media[i]
+          var post;
+          post = {
+            id: rawPost.code,
+            username: _this.username,
+            time: +rawPost['created_time'],
+            type: rawPost.__typename,
+            likes: rawPost.likes.count,
+            comments: rawPost.comments.count
+          };
+          if (rawPost.caption != null) {
+            post.text = rawPost.caption;
+          }
+          switch (post.type) {
+            case 'GraphImage':
+              post.media = rawPost.display_src;
+              break;
+            case 'GraphSidecar':
+              post.media = rawPost.display_src;
+              //.map(function(media) {
+              //   return media[media.images ? 'images' : 'videos']['standard_resolution'].url;
+              // });
+            case 'GraphVideo':
+              post.media = rawPost.display_src;
+              break;
+            default:
+              throw new Error("Instagram did not return a URL for the media on post " + post.id);
+          }
+          _this._minPostId = rawPost.id;
+          if (lastPost != null) {
+            _this.push(lastPost);
+          }
+          lastPost = post;
         }
         return lastPost = post;
-      };
+      }
     })(this)).on('end', (function(_this) {
       return function() {
         if (hasMorePosts) {
