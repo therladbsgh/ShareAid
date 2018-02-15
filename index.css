@@ -1,0 +1,42 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+}
+
+.instagramPost {
+  margin: auto;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+
+.instagramHeader {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #efefef;
+  align-items: center;
+}
+
+.username {
+  margin: 0 0 0 12px;
+}
+
+.instagramFooter {
+  margin: 20px 0;
+}
+
+.caption {
+  padding: 0 16px;
+}
+
+.profilePicture {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.postedImage {
+  height: 600px;
+  width: 600px;
+}
