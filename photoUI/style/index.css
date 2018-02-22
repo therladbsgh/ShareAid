@@ -3,12 +3,43 @@ body {
   font-weight: 600;
   font-size: 14px;
   display: flex;
+  flex-direction: column;
+}
+
+.newPhotoButton {
+  background-image: url('instagram.jpg');
+  display: flex;
+  padding: 15px 0;
+  background-position: 55% 55%; 
+  width: 150px;
+  display: flex;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.newPhotoButton:hover {
+  cursor: pointer;
+}
+
+.newPhotoText {
+  margin: auto;
+  color: #efefef;
 }
 
 .instagramPost {
+  width: 600px;
   margin: auto;
   border: 1px solid #efefef;
   border-radius: 5px;
+}
+
+.photo {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .instagramHeader {
@@ -34,9 +65,4 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-}
-
-.postedImage {
-  height: 600px;
-  width: 600px;
 }
