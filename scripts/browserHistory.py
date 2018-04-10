@@ -1,5 +1,9 @@
 # HOW TO USE:
-# Before running this script, 
+# Before running this script, make sure you have:
+# 1) Made a copy your Chrome History file and placed it somewhere else (see line 12 below for why)
+# 2) Run getSharedLinks.js and scraped your Facebook links history. See getSharedLinks.js for instructions.
+# When ready, run python browserHistory.py
+# The script will print in the terminal a 5-sentence summary of one article from your history.
 
 import os, StringIO, sqlite3, summarizer, requests, urllib2, html2text, csv, random
 
