@@ -1,3 +1,6 @@
+# HOW TO USE:
+# Before running this script, 
+
 import os, StringIO, sqlite3, summarizer, requests, urllib2, html2text, csv, random
 
 ''' CHROME HISTORY '''
@@ -31,7 +34,7 @@ c.close()
 
 ''' FACEBOOK SHARES '''
 
-# See getSharedLinks.js for Facebook Graph API Links extraction. TODO: combine them with a node server
+# Use getSharedLinks.js for Facebook Graph API Links extraction. See that file for instructions. TODO: combine them with a node server
 facebookLinksPath = './philipTimelineLinks.csv'
 sharedLinks = []
 with open(facebookLinksPath, 'r') as csvfile:
@@ -41,7 +44,10 @@ with open(facebookLinksPath, 'r') as csvfile:
 
 sharedLinks = set(sharedLinks)
 
-''' LINK SELECTION '''
+''' LINK SELECTION 
+    This section is still very WIP. We need a smart way of filtering out links that have no useful content.
+    Right now, I did some basic filtering, but at the end it just chooses a random link. For me, it's usually really bad
+'''
 
 # basic blocker of links that usually aren't shared
 EXCLUSIONS = set(['www.google.com', 'www.gmail.com', 'www.facebook.com'])
@@ -96,6 +102,6 @@ print content
 
 ''' TEXT SUMMARY '''
 
-summary = summarizer.summarize('In Montgomery, a City Embedded With Pain, Finding Progress', content, 5)
+summary = summarizer.summarize('ARTICLE TITLE', content, 5)
 #print summary
 
