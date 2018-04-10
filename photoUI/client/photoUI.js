@@ -10,10 +10,10 @@ $("document").ready(() => {
     degree = orientationText[1]
     if (orientationText[2] == 'CW') {
       imageNode.css('transform', 'rotate(90deg)')
-      wrapperNode.css('height', '600px');
+      wrapperNode.css('height', '500px');
     } else if (orientationText[2] == 'CCW') {
       imageNode.css('transform', 'rotate(270deg)')
-      wrapperNode.css('height', '600px');
+      wrapperNode.css('height', '500px');
     } else if (!orientationText[2]) {
       imageNode.css('transform', 'rotate(' + degree + 'deg)')
       wrapperNode.css('height', 'initial');

@@ -1,3 +1,12 @@
+// HOW TO USE:
+// While in this directory, run in a terminal: python -m SimpleHTTPServer 8000 &
+// In a browser, go to localhost://8000/getSharedLinks.html
+// Click the Call Graph API button. 
+// If you are not logged in to Facebook, it may ask you to log in and give permission for this app to access your timeline.
+// It will take a few seconds to get all of the links. An alert will appear on the screen when it is finished. 
+// (If a minute passes, check the browser console to see if anything went wrong)
+// When it is finished, a Download button will appear - click it to download your links as a csv
+
 window.fbAsyncInit = function() {
   FB.init({
     appId            : '125590924761098',
@@ -9,14 +18,16 @@ window.fbAsyncInit = function() {
 };
 
 function dataFinished(data){
-  console.log('finished collecting posts');
-  links = []
+  links = ""
   for (var d in data) {
     if (!data[d].link) continue;
     if (data[d].link.includes('facebook')) continue;
-    links.push(data[d].link);
+    links += data[d].link + ', ';
   }
-  console.log(links);
+  links = links.slice(0, -2);
+  alert('finished collecting links - Click Download to download as csv');
+  var linksString = "data:text/json;charset=utf-8," + encodeURIComponent(links);
+  $(".downloadLink").attr("href", linksString).css("display", "block"); 
 }
 
 function getNextPage(link, data) {

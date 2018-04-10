@@ -20,12 +20,15 @@ const timeout = 100;
  */
 
 getPosts = function(username, startingId) {
-  return jsonRequest('user.media.nodes', {
-    uri: "https://instagram.com/" + username + "/?__a=1",
-    qs: {
-      'max_id': startingId
-    }
-  });
+  if (startingId === 0) {
+    return jsonRequest('graphql.hashtag.edge_hashtag_to_media', {
+      uri: "https://instagram.com/explore/tags/" + username + "/?__a=1",
+    });
+  } else {
+    return jsonRequest('graphql.hashtag.edge_hashtag_to_media', {
+      uri: "https://instagram.com/explore/tags/" + username + "/?__a=1&max_id="+startingId,
+    });
+  }
 };
 
 
@@ -53,8 +56,11 @@ InstagramPosts = (function(superClass) {
     this._readableState.destroyed = false;
   }
 
+  var tagCount = 0;
+  var tagLimit = 10;
+  var endCursor = 0;
   InstagramPosts.prototype._read = function() {
-    var hasMorePosts, lastPost;
+    var hasMorePosts = false, lastPost;
     if (this._lock) {
       return;
     }
@@ -63,44 +69,36 @@ InstagramPosts = (function(superClass) {
       this.push(null);
       return;
     }
-    hasMorePosts = false;
     lastPost = void 0;
     return setTimeout(() => {
-      return getPosts(this.username, this._minPostId).on('error', (function(_this) {
+      return getPosts(this.username, endCursor).on('error', (function(_this) {
         return function(err) {
           return _this.emit('error', err);
         };
       })(this)).on('data', (function(_this) {
         return function(media) {
-          hasMorePosts = true;
+          hasMorePosts = tagCount <= tagLimit;
+          if (!hasMorePosts) return;
+          endCursor = media.page_info.end_cursor;
+          media = media.edges
           for(var i in media) {
-            var rawPost = media[i]
+            var rawPost = media[i].node
             var post;
             post = {
-              id: rawPost.code,
+              id: rawPost.id,
               username: _this.username,
-              time: +rawPost['created_time'],
+              time: +rawPost['taken_at_timestamp'],
               type: rawPost.__typename,
-              likes: rawPost.likes.count,
-              comments: rawPost.comments.count
+              likes: rawPost.edge_liked_by.count,
+              comments: rawPost.edge_media_to_comment.count
             };
-            if (rawPost.caption != null) {
-              post.text = rawPost.caption;
+            if (rawPost.edge_media_to_caption.edges[0].node.text != null) {
+              post.text = rawPost.edge_media_to_caption.edges[0].node.text;
             }
-            switch (post.type) {
-              case 'GraphImage':
-                post.media = rawPost.display_src;
-                break;
-              case 'GraphSidecar':
-                post.media = rawPost.display_src;
-                //.map(function(media) {
-                //   return media[media.images ? 'images' : 'videos']['standard_resolution'].url;
-                // });
-              case 'GraphVideo':
-                post.media = rawPost.display_src;
-                break;
-              default:
-                throw new Error("Instagram did not return a URL for the media on post " + post.id);
+            if (rawPost.display_url) {
+              post.media = rawPost.display_url
+            } else {
+              continue;
             }
             _this._minPostId = rawPost.id;
             if (lastPost != null) {
@@ -111,11 +109,12 @@ InstagramPosts = (function(superClass) {
           return lastPost = post;
         }
       })(this)).on('end', (function(_this) {
-        return function() {
+        tagCount += 1;
+        return function(info) {
           if (hasMorePosts) {
             _this._lock = false;
           }
-          if (lastPost != null) {
+          if (lastPost !== null) {
             _this.push(lastPost);
           }
           if (!hasMorePosts) {

@@ -14,6 +14,7 @@ const clarifaiApp = new Clarifai.App({
 });
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
+const exec = require('child_process').exec;
 
 const adapter = new FileSync('photoDatabase.json')
 const photoDatabase = low(adapter)
@@ -33,14 +34,30 @@ function timeout(ms, func=null) {
 }
 
 function generateCaption(photo) {
-  return '[ Placeholder caption for ' + photo['metadata']['SourceFile'] + ' ]'
+  console.log(photo['metadata']);
+  var child = exec('cd im2txt && sh gen_cap.sh');
+  var caption = [];
+  child.stdout.on('data', function(data) {
+    if (data.split(' ')[0] === 'Captions') {
+      caption = data.split('\n')[1].split('0) ')[1].split('(')[0].split(' .')[0]
+      photo['metadata']['caption'] = caption;
+      console.log(caption);
+    }
+  });
+  child.stderr.on('data', function(data) {
+    console.log('stdout: ' + data);
+  });
+  child.on('close', function(code) {
+      console.log('closing code: ' + code);
+      //continue with stuff
+  });
 }
 
 //by-hand mapping
 const clarifaiMapping = {
   'selfie': new Set(['woman', 'man', 'person']),
   'people': new Set(['people', 'group', 'couple']),
-  'food': new Set(['food']),
+  'food': new Set(['food', 'breakfast']),
   'fashion': new Set(['fashion']),
   'pets': new Set(['animal', 'pet']),
   'activity': new Set(['outdoors', 'travel', 'recreation', 'leisure', 'city']),
@@ -49,16 +66,27 @@ const clarifaiMapping = {
 }
 
 apiRateCount = 0
-async function classifyPhoto(photoPath, type) {
-  apiRateCount += 1
-  if (apiRateCount % 10 == 0) {
-    console.log('resting api');
-    await timeout(1000);
-  }
 
+disallowedTypes = new Set(['.mov', '.mp4', '.heic'])
+function isValidPhotoType(photoPath) {
+  ending = photoPath.substring(photoPath.lastIndexOf('.'), photoPath.length)
+  if (disallowedTypes.has(ending.toLowerCase())) return false;
+  return true;
+}
+
+async function classifyPhoto(photoPath, type) {
   if (photoDatabase.get('photos').find({id:photoPath}).value()) {
     return photoDatabase.get('photos').find({id:photoPath}).value().photoType
   } else {
+
+    if (!isValidPhotoType(photoPath)) return null;
+
+    apiRateCount += 1
+    if (apiRateCount % 10 == 0) {
+      console.log('resting api');
+      await timeout(1000);
+    }
+    console.log(photoPath);
     if (type == 'bytes') {
       bytes = fs.readFileSync(photoPath)
       bytes = new Buffer(bytes).toString('base64');
@@ -113,6 +141,7 @@ async function clusterInstagram(pathToInstagramData) {
   instagramData = JSON.parse(fs.readFileSync(pathToInstagramData, 'utf8'))
   for (var i = 0; i < instagramData.length; i++) {
     photoType = await classifyPhoto(instagramData[i]['media'], 'url')
+    if (!photoType) continue;
     for (var r in photoType) {
       weights[r] += photoType[r];
     }
@@ -160,6 +189,7 @@ async function clusterAndRankPhotos(photoData) {
     for (var p = 0; p < cluster.photos.length; p++){
       photo = cluster.photos[p]
       photoType = await classifyPhoto(photo['metadata']['SourceFile'], 'bytes');
+      if (!photoType) continue;
       weight = 0;
       for (var r in photoType) {
         weight += userWeights[r] * photoType[r]
@@ -169,6 +199,7 @@ async function clusterAndRankPhotos(photoData) {
     }
   }
 
+  console.log(photoClusters.length);
   //Return clusters sorted by weight.
   //(The fact that they're sorted by weight isn't currently relevant, but might be in the future)
   return photoClusters.sort((a, b) => {
@@ -183,47 +214,67 @@ function makeMomentFromGoogleTimestamp(googleDateString) {
   return moment(new Date(newString));
 }
 
-fs.readdir(PHOTO_LOCATION, (err, files) => {
-  ep
-    .open()
-    .then(async function() {
-      console.log('reading in photos...');
-      allPhotos = []
-      for (var i = 3000; i < files.length; i++) {
-        file = files[i];
-        photoPath = PHOTO_LOCATION + file;
-        metadata = await ep.readMetadata(photoPath, ['-File:all']);
-        photo = await new Buffer(fs.readFileSync(photoPath)).toString('base64');
-        // For now, if no metadata, do not consider, but we're not storing photo data (for now?)
-        if (!metadata || !photo) continue;
-        allPhotos.push({'metadata': metadata['data'][0]});
-      }
-      return allPhotos;
-    })
-    .then(async function(allPhotos) {
-      photoData = allPhotos;
-      for (var i = 0; i < photoData.length; i++) {
-        photoData[i]['metadata']['CreateDate'] = 
-          photoData[i]['metadata']['CreateDate'] ? 
-            makeMomentFromGoogleTimestamp(photoData[i]['metadata']['CreateDate']) :
-            moment(new Date(0));
-        photoData[i]['metadata']['Caption'] = generateCaption(photoData[i]);
-      }
-      // Sort by date
-      photoData.sort((a, b) => {
-        return a['metadata']['CreateDate'] - b['metadata']['CreateDate'];
-      })
+//First convert any HEIC photos to JPG
 
-      photoData = await clusterAndRankPhotos(photoData);
-      console.log('photos sorted; ready');
-    })
-    .then(() => ep.close())
-    .catch(console.error)
+
+fs.readdir(PHOTO_LOCATION, (err, files) => {
+  //First convert any HEIC photos to JPG
+  var convertTimeout = 0;
+  for (var f in files) {
+    photoPath = PHOTO_LOCATION + files[f];
+    ending = photoPath.substring(photoPath.lastIndexOf('.'), photoPath.length)
+    if (ending.toLowerCase() === '.heic') {
+      convertTimeout += 500
+      exec('cd tifig/build && ./tifig ../../'+photoPath+' ../../'+photoPath.slice(0, -5)+'.jpg && rm ../../'+photoPath, (err, stdout, stderr) => {
+        if (err) console.log(err);
+      });
+      files[f] = files[f].slice(0, -5)+'.jpg';
+    }
+  }
+  console.log(convertTimeout);
+  setTimeout(() => {
+    ep
+      .open()
+      .then(async function() {
+        console.log('reading in photos...');
+        allPhotos = []
+        for (var i = 0; i < files.length; i++) {
+          file = files[i];
+          photoPath = PHOTO_LOCATION + file;
+          metadata = await ep.readMetadata(photoPath, ['-File:all']);
+          photo = await new Buffer(fs.readFileSync(photoPath)).toString('base64');
+          // For now, if no metadata, do not consider, but we're not storing photo data (for now?)
+          if (!metadata || !photo) continue;
+          allPhotos.push({'metadata': metadata['data'][0]});
+        }
+        return allPhotos;
+      })
+      .then(async function(allPhotos) {
+        photoData = allPhotos;
+        for (var i = 0; i < photoData.length; i++) {
+          photoData[i]['metadata']['CreateDate'] = 
+            photoData[i]['metadata']['CreateDate'] ? 
+              makeMomentFromGoogleTimestamp(photoData[i]['metadata']['CreateDate']) :
+              moment(new Date(0));
+          //generateCaption(photoData[i]);
+        }
+        // Sort by date
+        photoData.sort((a, b) => {
+          return a['metadata']['CreateDate'] - b['metadata']['CreateDate'];
+        })
+
+        photoData = await clusterAndRankPhotos(photoData);
+        console.log('photos sorted; ready');
+      })
+      .then(() => ep.close())
+      .catch(console.error)
+    }, convertTimeout)
 });
 
 app.use(express.static('assets'))
 app.use(express.static('style'));
 app.use(express.static('client'));
+app.use(express.static('im2txt'));
 
 app.get('/', (req, res) => {
   var template = fs.readFileSync('photoUI.html', {encoding:'utf-8'});
@@ -255,10 +306,36 @@ function weightedRandom(values, getWeight) {
 }
 
 //Choose a (semi-) random photo
+var timesRun = 0
 app.get('/loadPhoto', (req, res) => {
-  console.log(photoData);
+  //At least for purposes of pilot study:
+  //Assemble the "top ten" photos (i.e. from the top ten clusters, the best of each one)
+  //depending on the number of time being run, display one
+  //clusters were already sorted by weight above
+  timesRun = timesRun % 10;
+  cluster = photoData[timesRun];
+  photo = cluster.photos.sort((a, b) => b.metadata.weight - a.metadata.weight)[0];
+  timesRun += 1
+  /* 
+  console.log(photoData.length +' clusters');
   cluster = weightedRandom(photoData, cluster => cluster['weight']);
-  console.log(cluster, cluster.photos);
-  photo = weightedRandom(cluster['photos'], photo => photo['metadata']['weight'])
-  res.send(photo['metadata'])
+  console.log(cluster.photos.length + ' photos in selected cluster');
+  photo = weightedRandom(cluster['photos'], photo => photo['metadata']['weight']) */
+  var child = exec('cd im2txt && sh gen_cap.sh '+ '/Users/pjhinch/Documents/FourthYear/research/ShareAid/photoUI/'+photo['metadata']['SourceFile']);
+  var caption = [];
+  child.stdout.on('data', function(data) {
+    if (data.split(' ')[0] === 'Captions') {
+      caption = data.split('\n')[1].split('0) ')[1].split('(')[0].split(' .')[0]
+      photo['metadata']['Caption'] = caption;
+      console.log(caption);
+    }
+  });
+  child.stderr.on('data', function(data) {
+    //console.log('stdout: ' + data);
+  });
+  child.on('close', function(code) {
+      console.log('closing code: ' + code);
+      console.log(photo['metadata']);
+      res.send(photo['metadata'])
+  });
 });
