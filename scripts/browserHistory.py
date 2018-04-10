@@ -56,6 +56,9 @@ sharedLinks = set(sharedLinks)
 # basic blocker of links that usually aren't shared
 EXCLUSIONS = set(['www.google.com', 'www.gmail.com', 'www.facebook.com'])
 
+# Some experimental stuff with separating sites based on their base url (e.g. putting all 'youtube.com' links into one dictionary array)
+# Ignoring for now
+'''
 allSites = {}
 
 for result in results:
@@ -72,12 +75,8 @@ for result in results:
 
 validSites = []
 
-count = 0
-
 for site in allSites:
   for url in allSites[site]:
-    count += 1
-    print len(results) - count
     try:
       html = urllib2.urlopen(url)
       if site in validSites:
@@ -93,7 +92,9 @@ for site in validSites:
   if len(validSites[site]) > maxSite:
     maxSite = len(validSites[site])
     chosenLink = validSites[site][random.randint(0, maxSite-1)]
+'''
 
+chosenLink = results[random.randint(0, len(results)-1)][0]
 print chosenLink
 
 ''' CONTENT EXTRACTION '''
@@ -107,5 +108,5 @@ print content
 ''' TEXT SUMMARY '''
 
 summary = summarizer.summarize('ARTICLE TITLE', content, 5)
-#print summary
+print summary
 
