@@ -1,0 +1,12 @@
+# Don't add this stuff when building docker image
+build
+cmake-build-debug
+Dockerfile
+lib/easyexif/test-images
+lib/heif/Docs/JavaScript
+test/venv
+**/.git
+**/.gitignore
+.gitmodules
+.idea
+.travis.yml

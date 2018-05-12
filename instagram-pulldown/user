@@ -1,6 +1,0 @@
-starting posts
-initializing
-failed 404
-user.media.nodes { uri: 'https://instagram.com/user/?__a=1',
-  qs: { max_id: undefined },
-  gzip: true }
