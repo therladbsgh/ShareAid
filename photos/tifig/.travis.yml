@@ -1,0 +1,16 @@
+language: generic
+sudo: required
+
+services:
+- docker
+
+script:
+- docker pull guetux/alpine_vips_ffmpeg
+- docker build -t guetux/tifig .
+- docker run -t --rm -w /tifig/build guetux/tifig /tifig/test/tests.py
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push guetux/tifig;
+    fi

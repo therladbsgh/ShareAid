@@ -1,0 +1,377 @@
+[
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/auxiliarytypeproperty.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/auxiliarytypeproperty.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/auxiliarytypeproperty.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/avcconfigurationbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/avcconfigurationbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/avcconfigurationbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/avcdecoderconfigrecord.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/avcdecoderconfigrecord.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/avcdecoderconfigrecord.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/avcsampleentry.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/avcsampleentry.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/avcsampleentry.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/bbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/bbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/bbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/bitstream.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/bitstream.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/bitstream.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/chunkoffsetbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/chunkoffsetbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/chunkoffsetbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/cleanaperture.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/cleanaperture.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/cleanaperture.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/codingconstraintsbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/codingconstraintsbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/codingconstraintsbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/compositionoffsetbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/compositionoffsetbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/compositionoffsetbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/compositiontodecodebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/compositiontodecodebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/compositiontodecodebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/datainformationbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/datainformationbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/datainformationbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/datareferencebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/datareferencebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/datareferencebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/decodepts.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/decodepts.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/decodepts.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/editbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/editbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/editbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/entitytogroupbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/entitytogroupbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/entitytogroupbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/filetypebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/filetypebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/filetypebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/fourccint.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/fourccint.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/fourccint.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/fullbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/fullbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/fullbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/groupslistbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/groupslistbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/groupslistbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/handlerbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/handlerbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/handlerbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/hevcconfigurationbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/hevcconfigurationbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/hevcconfigurationbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/hevcdecoderconfigrecord.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/hevcdecoderconfigrecord.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/hevcdecoderconfigrecord.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/hevcsampleentry.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/hevcsampleentry.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/hevcsampleentry.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/idspace.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/idspace.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/idspace.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/imagemirror.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagemirror.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagemirror.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/imagespatialextentsproperty.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagespatialextentsproperty.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagespatialextentsproperty.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/imagerotation.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagerotation.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagerotation.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/imagerelativelocationproperty.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagerelativelocationproperty.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagerelativelocationproperty.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/imagegrid.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagegrid.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imagegrid.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/imageoverlay.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imageoverlay.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/imageoverlay.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/itemdatabox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemdatabox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemdatabox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/iteminfobox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/iteminfobox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/iteminfobox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/itemlocationbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemlocationbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemlocationbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/itempropertiesbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itempropertiesbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itempropertiesbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/itempropertyassociation.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itempropertyassociation.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itempropertyassociation.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/itempropertycontainer.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itempropertycontainer.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itempropertycontainer.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/itemprotectionbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemprotectionbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemprotectionbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/itemreferencebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemreferencebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/itemreferencebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/layeredhevcconfigurationitemproperty.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/layeredhevcconfigurationitemproperty.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/layeredhevcconfigurationitemproperty.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/layerselectorproperty.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/layerselectorproperty.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/layerselectorproperty.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/lhevcdecoderconfigrecord.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/lhevcdecoderconfigrecord.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/lhevcdecoderconfigrecord.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/log.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/log.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/log.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/mediabox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediabox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediabox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/mediadatabox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediadatabox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediadatabox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/mediaheaderbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediaheaderbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediaheaderbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/mediainformationbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediainformationbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/mediainformationbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/metabox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/metabox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/metabox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/moviebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/moviebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/moviebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/movieheaderbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/movieheaderbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/movieheaderbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/operatingpointsinformation.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/operatingpointsinformation.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/operatingpointsinformation.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/primaryitembox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/primaryitembox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/primaryitembox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/protectionschemeinfobox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/protectionschemeinfobox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/protectionschemeinfobox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/sampledescriptionbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampledescriptionbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampledescriptionbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/sampleentrybox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampleentrybox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampleentrybox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/samplesizebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/samplesizebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/samplesizebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/sampletablebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampletablebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampletablebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/sampletochunkbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampletochunkbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampletochunkbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/sampletogroupbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampletogroupbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/sampletogroupbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/samplegroupdescriptionbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/samplegroupdescriptionbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/samplegroupdescriptionbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/samplegroupentry.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/samplegroupentry.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/samplegroupentry.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/syncsamplebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/syncsamplebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/syncsamplebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/targetolsproperty.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/targetolsproperty.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/targetolsproperty.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/timetosamplebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/timetosamplebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/timetosamplebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/trackbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/trackheaderbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackheaderbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackheaderbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/trackreferencebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackreferencebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackreferencebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/trackreferencetypebox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackreferencetypebox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/trackreferencetypebox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/videomediaheaderbox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/videomediaheaderbox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/videomediaheaderbox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/common",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/common.dir/visualsampleentrybox.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/visualsampleentrybox.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common/visualsampleentrybox.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/jsonlib",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/json.dir/jsoncpp.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/jsonlib/jsoncpp.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/jsonlib/jsoncpp.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/parser/avcparser",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/avcparser.dir/avcparser.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser/avcparser.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/avcparser/avcparser.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/parser/h265parser",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/common -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/h265parser.dir/h265parser.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser/h265parser.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/parser/h265parser/h265parser.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/reader",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/reader/../common -I/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/heifreader.dir/hevcimagefilereader.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/reader/hevcimagefilereader.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/reader/hevcimagefilereader.cpp"
+},
+{
+  "directory": "/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif/Srcs/reader",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/reader/../common -I/Users/pjhinch/Documents/FourthYear/research/tifig/build/lib/heif   -std=c++11  -O3 -DNDEBUG -Wno-unused-parameter -Wno-unused-variable   -std=gnu++11 -o CMakeFiles/heifreader.dir/imagefilereaderfactory.cpp.o -c /Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/reader/imagefilereaderfactory.cpp",
+  "file": "/Users/pjhinch/Documents/FourthYear/research/tifig/lib/heif/Srcs/reader/imagefilereaderfactory.cpp"
+}
+]

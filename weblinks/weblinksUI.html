@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Facebook Graph API</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Philip Hinch"> 
+    <link rel="shortcut icon" href="./favicon.ico">
+
+    <script src="weblinksUI.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+
+<body>
+  <div class="buttonWrapper">
+    <div class="facebookGraph" onclick="graphCall()">
+      <p class="facebookGraphText">Call the Graph API</p>
+    </div>
+  </div>
+  <div class="loadingWrapper">
+    <p class="loadingText graph">Retrieving the links you've shared on Facebook...</p>
+    <p class="loadingText history">Finding a link to share from your history...</p>
+  </div>
+  <div class="afterGraph">
+    <div class="facebookPost">
+      <div class="facebookHeader">
+        <img src="philip_thumbnail.jpg" alt="profile pic" class="profilePicture" />
+        <div class="headerTextWrapper">
+          <p class="headerMainText"><a class="usernameText">{{username}}</a> shared a <a href={{link}}>link</a>.</p>
+          <p class="headerSubText">Just now · {{source}}</p>
+        </div>
+      </div>
+      <div class="bodyWrapper">
+        <div class="caption">{{caption}}</div>
+        <div class="photo">
+          <img src="sample_image.jpg" alt="link photo" class="linkImage"/>
+        </div>
+        <div class="linkTextWrapper">
+          <p class="linkMainText">{{linkMainText}}</p>
+          <p class="linkSubText">{{linkSubText}}</p>
+          <p class="linkBaseURL">todo: pull out the base URL (e.g. 'nytimes.com') from the given url and put it here</p>
+        </div>
+      </div>
+      <img class="icons" src="icons.png" />
+    </div>
+    <br>
+    <div class="buttonWrapper">
+      <div class="facebookShare">
+        <p class="facebookShareText">Share to Facebook</p>
+      </div>
+      <div class="getNewLink">
+        <p class="getNewLinkText">Try a New Link</p>
+      </div>
+    </div>
+  </div>
+</body>
