@@ -20,7 +20,7 @@ const adapter = new FileSync('oldphotoDatabase.json')
 const photoDatabase = low(adapter)
 
 //philip
-PHOTO_LOCATION = "assets/phinch/allphotos/"
+PHOTO_LOCATION = "philip/"
 INSTAGRAM_PATH = "assets/phinch/phlippapippa.json"
 USERNAME = "phlippapippa"
 USER_ID = '1238710579';
@@ -300,7 +300,7 @@ async function run() {
           file = files[i];
           photoPath = PHOTO_LOCATION + file;
           metadata = await ep.readMetadata(photoPath, ['-File:all']);
-          photo = await new Buffer(fs.readFileSync(photoPath)).toString('base64');
+          photo = "await new Buffer(fs.readFileSync(photoPath)).toString('base64')";
           // For now, if no metadata, do not consider, but we're not storing photo data (for now?)
           if (!metadata || !photo) continue;
           allPhotos.push({'metadata': metadata['data'][0]});
@@ -308,7 +308,9 @@ async function run() {
         return allPhotos;
       })
       .then(async function(allPhotos) {
+        console.log('got metadata');
         photoData = allPhotos;
+        /*
         for (var i = 0; i < photoData.length; i++) {
           photoData[i]['metadata']['CreateDate'] = 
             photoData[i]['metadata']['CreateDate'] ? 
@@ -320,10 +322,54 @@ async function run() {
         photoData.sort((a, b) => {
           return a['metadata']['CreateDate'] - b['metadata']['CreateDate'];
         })
+        */
 
-        photoData = await clusterAndRankPhotos(photoData);
-        console.log('photos sorted; ready');
-        getTopPhotos(photoData);
+        //photoData = await clusterAndRankPhotos(photoData);
+        //console.log('photos sorted; ready');
+        //getTopPhotos(photoData);
+        //0. For testing, select 10 random photos (eventually replaced by triage TODO)
+        //For triage:
+        //1. cluster all photos by time from the last X months (set a default - perhaps eventaully let user choose a range)
+        //2. filter out noise - non-clusters or other techniques to get rid of certain photos
+        // (i'm ripping out clarifai for now but step 2 is probably where some kind of clarifai would come in)
+        //3. for each cluster, feed into clarifai to get the "best" photo
+        // (this is somewhat crude because triage is meant to be used on photos of the same _scene_: but...anyway)
+
+        randomPhotoIndices = []
+        photos_to_caption = []
+        for (var i = 0; i < 10; i++) {
+          randomPhotoIndices.push(Math.floor(Math.random() * Math.floor(photoData.length)))
+          console.log(photoData[randomPhotoIndices[i]]['metadata']['SourceFile']);
+          splitId = photoData[randomPhotoIndices[i]]['metadata']['SourceFile'].split("/");
+          photos_to_caption.push({
+            "tags": [],
+            "caption": "placeholder caption",
+            "l_url": "////"+splitId[splitId.length-1], //hacked url to get right filepaths in attend2u; sorry
+            "user": {"username":"phlippapippa","u_id":1238710579,"s_url": ""},
+          });
+        }
+        //1. create a JSON file resembling phlippapippa.json that will be passed to attend2u (captions are blank; "urls" are in a hacked-up form)
+        photos_to_caption_string = JSON.stringify(photos_to_caption);
+        fs.writeFile('phlippapippa_to_caption.json', photos_to_caption_string, 'utf8', () => {
+          console.log('wrote to file');
+          cmd = "./run_attend2u_local.sh phlippapippa 1238710579 /Users/pjhinch/Documents/FourthYear/research/ShareAid/photos/philip/ ";
+          for (var i in photos_to_caption) {
+            splitId = photoData[randomPhotoIndices[i]]['metadata']['SourceFile'].split("/");
+            cmd += splitId[splitId.length-1] + " "
+          }
+          console.log(cmd);
+          var child = exec(cmd);
+          child.stdout.on('data', function(a) {
+            console.log(a);
+          })
+          child.stderr.on('data', function(a) {
+            console.log(a);
+          })
+          child.on('close', function(code) {
+            console.log('closed', code);
+            // pass values forward to update the UI
+          });
+        });
       })
       .then(() => ep.close())
       .catch(console.error)
@@ -400,7 +446,7 @@ app.get('/loadPhoto', (req, res) => {
   timesRun = (timesRun + 1) % 10;
 
   //im2txt
-  //TODO: rip this out and replace with im2txt
+  //TODO: rip this out and replace with attend2u
   var child = exec('cd im2txt && sh gen_cap.sh '+ '/Users/pjhinch/Documents/FourthYear/research/ShareAid/photoUI/'+photo['metadata']['SourceFile']);
   var caption = [];
   child.stdout.on('data', function(data) {

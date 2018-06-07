@@ -2,7 +2,13 @@
 
 ShareAid/Photos is currently the most developed portion of the ShareAid project. The current implementation of the system takes in an Instagram account's photos and captions and a camera roll from Google Photos and recommends captioned photos from the camera roll "in the style of" the account. 
 
-## Setup
+## Required Setup
+
+ShareAid/Photos makes use of [Attend2U](https://github.com/cesc-park/attend2u), a photo captioning system. For local use, we use a heavily edited and trimmed-down version of the system. Download and unzip our version [here](TODOLINK). **You must download this version -- do not clone the repo above!** The scripts in it are carefully calibrated to integrate with the rest of the demo, and we have included the bare minimum of files in order to keep it streamlined for personal computer use.
+
+The system also uses [Triage](http://phototriage.cs.princeton.edu/paper/Chang2016APT.pdf), a system that helps to select objectively well-taken photos. To set up triage, TODOTODOTODO (I haven't done it yet, so I don't know what to write here lol -Philip)
+
+## Semi-Optional Setup
 
 (If you wish to skip this step, you can use my photos and my Instagram account to play around with the demo. These files are provided (TODO - maybe will have to zip the photos or something). If you wish to set up ShareAid/Photos with your own Instagram account and/or your own photos, please follow the instructions below.)
 
@@ -10,7 +16,7 @@ Unfortunately, there is currently significant work required to set up a new acco
 
 After doing this, a folder will be created with Google Photos - access it and get the ID of the folder (e.g. the ID of https://drive.google.com/drive/folders/1UY9mrTRT1XD1OeKZJmUrlrZ0KU_iXe9D is 1UY9mrTRT1XD1OeKZJmUrlrZ0KU_iXe9D). Use this ID in the `google-drive-backup/drive.py` script, taken from another repository. (TODO: Port that folder into this folder) This will download all of the photos from the user's camera roll to a specified location on the local system. 
 
-To get Instagram data, change the `USERNAME` constant on line 4 of `instagramPhantomScraper.js` and run it with `node instagramPhantomScraper.js` to generate a JSON of the user's Instagram posts. This is not a 100% working script, because headless browser scraping is finnicky, so you might have to run it a few times to get all the posts... :p
+To get Instagram data, change the `USERNAME` constant on line 4 of `instagramPhantomScraper.js` and run it with `node instagramPhantomScraper.js` to generate a JSON of the user's Instagram posts. This is not a 100% working script, because headless browser scraping is finnicky, so you might have to run it a few times to get all the posts.
 
 Once you have a JSON of the Instagram account and a folder with camera roll folders, you are ready to run the ShareAid script.
 
@@ -22,10 +28,10 @@ At this time, we are unable to post to Instagram because of an extreme overhaul 
 
 ## Other Notes
 
-FYI: ShareAid/Photos uses a number of third-party machine-learning softwares, including, at different points in time, the Clarifai API, [Triage](http://phototriage.cs.princeton.edu/paper/Chang2016APT.pdf), [Attend2U](https://github.com/cesc-park/attend2u), and possibly others. These systems are black-box, so we are not able to precisely answer questions of "why" a certain photo was selected or "how" the machine knew to create certain captions. 
+FYI: ShareAid/Photos uses a number of third-party machine-learning softwares, including, at different points in time, the Clarifai API, [Triage](http://phototriage.cs.princeton.edu/paper/Chang2016APT.pdf), [Attend2U](https://github.com/cesc-park/attend2u), and possibly others. These systems are black-box, so we are not able to precisely answer questions of "why" a certain photo was selected or "how" the machine creates certain captions.
+
+The photos the Instagram scraper gets right now are of very low quality. I think increasing the quality could lead to dramatically better captions because I'm worried that they're just too low quality for scene recognition right now.
 
 ##
 
-If you have any questions, please email [philip_hinch@brown.edu](mailto:philip_hinch@brown.edu).
-
-
+If you have any questions, please email me at [philip_hinch@brown.edu](mailto:philip_hinch@brown.edu).
