@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  margin-bottom: 100px;
+}
+
+.headerWrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 750px;
+}
+
+hr {
+  margin: 25px 0 50px 0;
+  width: 750px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  text-align: center;
+  margin: 100px auto 50px auto;
+  max-width: 600px;
+}
+
+

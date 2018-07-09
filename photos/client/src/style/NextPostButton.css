@@ -1,0 +1,19 @@
+.nextPostButton {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+
+.buttonImage {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.buttonImage:hover {
+  cursor: pointer;
+}
+
+.reject.buttonImage {
+  filter: invert(100%);
+}

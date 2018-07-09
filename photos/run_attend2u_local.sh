@@ -38,6 +38,6 @@ python attend2u/scripts/cnn_feature_extractor.py --gpu_id 0 --batch_size 32 --in
 python attend2u/scripts/cnn_feature_extractor.py --gpu_id 0 --batch_size 32 --input_fname "attend2u/data/caption_dataset/$1_test.txt"
 python attend2u/label_local.py $1
 
-mv "./$1" "$1_caption_results.txt"
+mv "./$1" "$1_caption_results.json"
 # When label_local finishes, the captions of all the photos will be stored in caption_results.txt in the directory this was run from. 
 # I'm leaving it to the caller of this script to arrange that data into whatever appropriate form.
