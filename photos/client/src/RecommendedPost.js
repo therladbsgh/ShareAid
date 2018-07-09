@@ -26,11 +26,6 @@ class RecommendedPost extends Component {
     super(props);
   }
 
-  //TODO: Orient the photo to be upright based on EXIF data. can do it by updating rotateImage above
-  componentDidMount() {
-
-  }
-
   render() {
     return (
       <div className="RecommendedPost">

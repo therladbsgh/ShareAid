@@ -6,7 +6,6 @@ const express = require('express')
 const app = express()
 const path = require('path');
 const util = require('util');
-const Mustache = require('mustache');
 const moment = require('moment');
 const exec = require('child_process').exec;
 
@@ -61,7 +60,9 @@ async function clusterPhotos(photoData) {
   //photo "clusters" are formed when the user takes continuous photos without a gap of more than 15 minutes. 
   //i.e. a cluster can span an infinite amount of time if the user takes a photo every 14 minutes.
   //more realistically, clusters are hopefully formed around specific events 
-  //TODO: there's undoubtedly a smarter way to do this
+  //TODO: there's undoubtedly a smarter way to do this - probably around location instead of around time,
+  // or a more flexible definition of "time" to allow for stretching or shrinking of clusters based on other metrics.
+  // (i.e. a combination of location and time clustering)
   photoClusters = [];
   waitTime = 900000; //15 minutes
   clusterTime = moment(new Date(0));
@@ -234,7 +235,7 @@ run();
 app.get('/getPhotos', (req, res) => {
   console.log('checking');
   // if not finished yet, make client wait
-  // TODO: sorry, i know there's a much better way to do this (possibly using react-router?) but i'm not gonna do it rn
+  // TODO: sorry, i know there's a much better way to do this (possibly using react-router?), but this method is a hacky quick working thing
   if (!finished) {
     res.send('null');
   } else {

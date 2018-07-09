@@ -14,7 +14,7 @@ The system also uses [Triage](http://phototriage.cs.princeton.edu/paper/Chang201
 
 Unfortunately, there is currently significant work required to set up a new account for ShareAid photos. To get a new camera roll, the user must first download the Google Photos app on their phone and choose to sync their photos to Google. (If the user has an Android, this may happen automatically - I'm almost certain it happens automatically with a Pixel.) After doing this, the user needs to go to Google Drive > Settings and check the box that says "Automatically put your Google Photos into a folder in My Drive." 
 
-After doing this, a folder will be created with Google Photos - access it and get the ID of the folder (e.g. the ID of https://drive.google.com/drive/folders/1UY9mrTRT1XD1OeKZJmUrlrZ0KU_iXe9D is 1UY9mrTRT1XD1OeKZJmUrlrZ0KU_iXe9D). Use this ID in the `google-drive-backup/drive.py` script, taken from another repository. (TODO: Port that folder into this folder) This will download all of the photos from the user's camera roll to a specified location on the local system. 
+After doing this, a folder will be created with Google Photos - access it and get the ID of the folder (e.g. the ID of https://drive.google.com/drive/folders/1UY9mrTRT1XD1OeKZJmUrlrZ0KU_iXe9D is 1UY9mrTRT1XD1OeKZJmUrlrZ0KU_iXe9D). Use your ID in the `google-drive-backup/drive.py` script, found [here](https://github.com/vikynandha/google-drive-backup). This will download all of the photos from the user's camera roll to a specified location on the local system. 
 
 To get Instagram data, change the `USERNAME` constant on line 4 of `instagramPhantomScraper.js` and run it with `node instagramPhantomScraper.js` to generate a JSON of the user's Instagram posts. This is not a 100% working script, because headless browser scraping is finnicky, so you might have to run it a few times to get all the posts.
 
@@ -22,7 +22,11 @@ Once you have a JSON of the Instagram account and a folder with camera roll fold
 
 ## Running
 
-Run `yarn dev` in this directory to start the server. The photo analysis and organization will begin and the app should open up on `http://localhost:3000`. Once the system has finished (which could take somewhere around 10 minutes), the recommendations will load on the screen.
+Run `npm install` in this directory before starting. This should install any packages needed. (This step might need a little debugging because I wasn't very careful about managing which packages we use)
+
+Run `yarn dev` in this directory to start both the server and the client. (If you wish to start each separately, which I find useful for debugging, run `yarn server` in this directory and `yarn client` in the `client/` folder.) The photo analysis and organization will begin and the app should open up on `http://localhost:3000`. Once the system has finished (which could take somewhere around 10 minutes), the recommendations will load on the screen. 
+
+When Caffe is installed, set `USE_TRIAGE=true` at the top of the `photoSelect.js` file to go down that route instead. If it is set to false, random photos will be chosen from each cluster instead. 
 
 At this time, we are unable to post to Instagram because of an extreme overhaul Instagram is doing to its API; read more [here] (https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/). According to that post, permissions for standard users (i.e. non-business accounts) will begin to be supported in early 2019, so we expected to be able to start posting to Instagram around that time. 
 
