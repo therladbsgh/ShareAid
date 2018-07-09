@@ -1,8 +1,12 @@
 # ShareAid/Photos
 
-ShareAid/Photos is currently the most developed portion of the ShareAid project. The current implementation of the system takes in an Instagram account's photos and captions and a camera roll from Google Photos and recommends captioned photos from the camera roll "in the style of" the account. 
+ShareAid/Photos is currently the most developed portion of the ShareAid project. The current implementation of the system takes in an Instagram account's photos and captions and a camera roll from Google Photos and recommends captioned photos from the camera roll "in the style of" the account.
+
+**Last updated 9 July 2018** If you just want to run a demo without making changes, you can download a frozen version of the code, with all setup already completed, by downloading and unzipping the `photodemo_09072018.zip` folder found [here](https://drive.google.com/open?id=1W-5_NmoYEG7owN7FYdV4EKNnaRlLbUUg). Once unzipped, all you should need to do is run `run_photos.sh`. The demo can take upwards of 10 minutes to complete. **Please do not edit this demo code - changes should instead be made to the actual Github repository instead.**
 
 ## Required Setup
+
+ShareAid/Photos uses code written in Python 2.7.
 
 ShareAid/Photos makes use of [Attend2U](https://github.com/cesc-park/attend2u), a photo captioning system. For local use, we use a heavily edited and trimmed-down version of the system. Download and unzip [our version](https://drive.google.com/open?id=1W-5_NmoYEG7owN7FYdV4EKNnaRlLbUUg) into the photos directory. **You must download this version -- do not clone the repo above!** The scripts in it are carefully calibrated to integrate with the rest of the demo, and we have included the bare minimum of files in order to keep it streamlined for personal computer use.
 
