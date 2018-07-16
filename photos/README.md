@@ -6,7 +6,7 @@ ShareAid/Photos is currently the most developed portion of the ShareAid project.
 
 ## Required Setup
 
-ShareAid/Photos uses code written in Python 2.7.
+ShareAid/Photos uses code written in Python 2.7. It is a React App with a Node.js (Express) backend.
 
 ShareAid/Photos makes use of [Attend2U](https://github.com/cesc-park/attend2u), a photo captioning system. For local use, we use a heavily edited and trimmed-down version of the system. Download and unzip [our version](https://drive.google.com/open?id=1W-5_NmoYEG7owN7FYdV4EKNnaRlLbUUg) into the photos directory. **You must download this version -- do not clone the repo above!** The scripts in it are carefully calibrated to integrate with the rest of the demo, and we have included the bare minimum of files in order to keep it streamlined for personal computer use.
 
@@ -26,13 +26,15 @@ Once you have a JSON of the Instagram account and a folder with camera roll fold
 
 ## Running
 
+For a quick full run, run `run_photos.sh` in this directory. This should install all required npm packages and start the server and client. A step-by-step alternative:
+
 Run `npm install` in this directory before starting. This should install any packages needed. (This step might need a little debugging because I wasn't very careful about managing which packages we use)
 
 Run `yarn dev` in this directory to start both the server and the client. (If you wish to start each separately, which I find useful for debugging, run `yarn server` in this directory and `yarn client` in the `client/` folder.) The photo analysis and organization will begin and the app should open up on `http://localhost:3000`. Once the system has finished (which could take somewhere around 10 minutes), the recommendations will load on the screen. 
 
 When Caffe is installed, set `USE_TRIAGE=true` at the top of the `photoSelect.js` file to go down that route instead. If it is set to false, random photos will be chosen from each cluster instead. 
 
-At this time, we are unable to post to Instagram because of an extreme overhaul Instagram is doing to its API; read more [here] (https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/). According to that post, permissions for standard users (i.e. non-business accounts) will begin to be supported in early 2019, so we expected to be able to start posting to Instagram around that time. 
+At this time, we are unable to post to Instagram because of an extreme overhaul Instagram is doing to its API; read more [here](https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/). According to that post, permissions for standard users (i.e. non-business accounts) will begin to be supported in early 2019, so we expected to be able to start posting to Instagram around that time. 
 
 ## Other Notes
 

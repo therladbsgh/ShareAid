@@ -1,2 +1,1 @@
-npm install
-yarn dev
+yarn && cd client && yarn && cd .. && yarn dev
