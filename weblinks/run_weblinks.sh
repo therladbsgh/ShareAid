@@ -1,4 +1,3 @@
 #!/bin/bash
-yarn && cd client && yarn && cd ..
-python -m SimpleHTTPServer 8000 &
-yarn dev
+cd client && yarn && cd ../server && yarn && cd ..
+cd server && yarn dev

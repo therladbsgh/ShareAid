@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import openSocket from 'socket.io-client';
 import './style/index.css';
 import './App.css';
 
@@ -8,27 +10,37 @@ class App extends Component {
     this.state = {
       response: '',
       status: 'not started',
+      socket: openSocket('http://localhost:1337'),
+      suggestions: [],
+      urlSet: new Set(),
+      counter: 0,
       facebookData: '',
     }
+
+    this.state.socket.on('suggest', data => {
+      if (!this.state.urlSet.has(data.url)) {
+        this.state.urlSet.add(data.url);
+        const suggestions = this.state.suggestions;
+        suggestions.push(data);
+        this.setState({
+          suggestions,
+        });
+      }
+    });
+
+    this.incrementCounter = this.incrementCounter.bind(this);
   }
 
-  async callApi() {
-    const response = await fetch('/analyzeHistory');
-    const body = await response.json();
-
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  };
+  incrementCounter() {
+    const counter = (this.state.counter + 1) % this.state.suggestions.length;
+    this.setState({ counter });
+  }
 
   startGraphCall() {
     this.setState({status: 'fetching'});
-    window.graphCall(this, this.processFacebookData);
-  }
-
-  processFacebookData(component, data) {
-    console.log(data)
-    component.setState({status: 'awaiting download', facebookData: data});
+    window.graphCall(this, (component, data) => {
+      component.setState({status: 'awaiting download', facebookData: data});
+    });
   }
 
   renderInitial() {
@@ -55,25 +67,22 @@ class App extends Component {
 
   analyzeHistory() {
     this.setState({status: 'analyzing'});
-    this.callApi()
-      .then(postInfo => {
-        console.log(postInfo);
-        if (postInfo === null) {
-          return;
-        } else {
-          this.setState({ response: postInfo, status: 'finished' })
-        }
-      }).catch(err => console.log(err));
+    this.state.socket.emit('analyze', this.state.facebookData);
   }
 
   renderAwaitDownload() {
     return (
       <div className="buttonWrapper">
         <a className="facebookDownload" href={this.downloadFacebookData(this.state.facebookData)} download="TimelineLinks.csv">
-          <div className="facebookGraph" onClick={() => this.analyzeHistory()}>
+          <div className="facebookGraph">
             <p className="facebookGraphText">Download Facebook Shares</p>
           </div>
         </a>
+        <div className="facebookDownload">
+          <div className="facebookGraph" onClick={() => this.analyzeHistory()}>
+            <p className="facebookGraphText">Analyze history</p>
+          </div>
+        </div>
       </div>
     );
   }
@@ -87,35 +96,37 @@ class App extends Component {
   }
 
   renderFinished() {
+    const suggest = this.state.suggestions[this.state.counter];
     return (
       <div className="afterGraph">
         <div className="facebookPost">
           <div className="facebookHeader">
             <img src="philip_thumbnail.jpg" alt="profile pic" className="profilePicture" />
             <div className="headerTextWrapper">
-              <p className="headerMainText"><a className="usernameText">{this.state.response.username}</a> shared a <a href={this.state.response.link}>link</a>.</p>
-              <p className="headerSubText">Just now · {this.state.response.source}</p>
+              <p className="headerMainText"><a className="usernameText">{"Test"}</a> shared a <a href={suggest.url}>link</a>.</p>
+              <p className="headerSubText">Just now · {"Source here"}</p>
             </div>
           </div>
-          <div className="bodyWrapper">
-            <div className="caption">{this.state.response.caption}</div>
-            <div className="photo">
-              <img src="sample_image.jpg" alt="link photo" className="linkImage"/>
+          <a href={suggest.url} className="linkWrapper">
+            <div className="bodyWrapper">
+              <div className="photo">
+                <img src={suggest.image} alt="link" className="linkImage"/>
+              </div>
+              <div className="linkTextWrapper">
+                <p className="linkMainText">{suggest.title}</p>
+                <p className="linkSubText">{suggest.subtext}</p>
+                <p className="linkBaseURL">{"Source here"}</p>
+              </div>
             </div>
-            <div className="linkTextWrapper">
-              <p className="linkMainText">{this.state.response.linkMainText}</p>
-              <p className="linkSubText">{this.state.response.linkSubText}</p>
-              <p className="linkBaseURL">{this.state.response.source}</p>
-            </div>
-          </div>
-          <img className="icons" src="icons.png" />
+          </a>
+          <img className="icons" src="icons.png" alt="icons" />
         </div>
         <br/>
         <div className="buttonWrapper">
           <div className="facebookShare">
             <p className="facebookShareText">Share to Facebook</p>
           </div>
-          <div className="getNewLink">
+          <div className="getNewLink" onClick={this.incrementCounter}>
             <p className="getNewLinkText">Try a New Link</p>
           </div>
         </div>
@@ -126,25 +137,26 @@ class App extends Component {
 
 
   render() {
-    return (
-      <div>
-        {this.state.status === 'not started' &&
-          this.renderInitial()
-        }
-        {this.state.status === 'fetching' &&
-          this.renderFetching()
-        }
-        {this.state.status === 'awaiting download' &&
-          this.renderAwaitDownload()
-        }
-        {this.state.status === 'analyzing' &&
-          this.renderAnalyzing()
-        }
-        {this.state.status === 'finished' &&
-          this.renderFinished()
-        }
-      </div>
-    );
+    if (this.state.suggestions.length > 0) {
+      return this.renderFinished();
+    } else {
+      return (
+        <div>
+          {this.state.status === 'not started' &&
+            this.renderInitial()
+          }
+          {this.state.status === 'fetching' &&
+            this.renderFetching()
+          }
+          {this.state.status === 'awaiting download' &&
+            this.renderAwaitDownload()
+          }
+          {this.state.status === 'analyzing' &&
+            this.renderAnalyzing()
+          }
+        </div>
+      );
+    }
   }
 }
 

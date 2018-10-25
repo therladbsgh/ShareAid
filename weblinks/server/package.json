@@ -2,12 +2,15 @@
   "name": "weblinks",
   "version": "1.0.0",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "node weblinksServer.js",
+    "client": "cd ../client && yarn start",
+    "server": "node server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "axios": "^0.18.0",
+    "express": "^4.16.2",
+    "socket.io": "^2.1.1",
+    "tree-kill": "^1.2.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
