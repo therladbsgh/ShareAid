@@ -19,7 +19,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>ShareAid WebLinks</title>
   </head>
   <script>
     window.fbAsyncInit = function() {
@@ -27,7 +27,7 @@
         appId            : '266922273934515',
         autoLogAppEvents : true,
         xfbml            : true,
-        version          : 'v2.10'
+        version          : 'v3.2'
       });
       FB.AppEvents.logPageView();
     };
@@ -46,14 +46,7 @@
         if (response.paging && response.paging.next) {
           this.getNextPage(response.paging.next, data, component, callback);
         } else {
-          //Convert data to basic links
-          var links = [];
-          for (var d in data) {
-            if (data[d].link) {
-              links.push(data[d].link);
-            }
-          }
-          callback(component, links);
+          callback(component, data);
         }
       });
     }
@@ -62,12 +55,20 @@
       FB.login(function(){
         data = []
         console.log('collecting posts...');
-        FB.api("/me/feed?fields=id,link",
+        FB.api("/me/feed?fields=id,link,caption,description,full_picture,message,name,permalink_url",
         function (response) {
           if (response.paging && response.paging.next) {
             getNextPage(response.paging.next, response.data, component, callback);
           }
         });
+      }, {scope: 'user_posts'});
+    }
+
+    function getName(component, callback) {
+      FB.login(function(){
+        data = []
+        console.log('collecting posts...');
+        FB.api("/me", callback);
       }, {scope: 'user_posts'});
     }
   </script>

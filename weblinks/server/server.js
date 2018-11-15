@@ -4,6 +4,7 @@ const { spawn, exec } = require('child_process');
 const socketio = require('socket.io');
 const fs = require('fs');
 const kill  = require('tree-kill');
+const { PythonShell } = require('python-shell');
 
 const app = express();
 app.use(bodyParser.json());
@@ -25,19 +26,43 @@ io.on('connection', (socket) => {
   socket.on('analyze', (data) => {
     console.log("Analysis starting");
     childRunning = true;
-    const child = exec(`cd utils && ~/anaconda3/bin/python browserHistory.py ${data}`);
+    process.chdir('utils');
+    fs.writeFileSync("data/facebookPosts.txt", JSON.stringify(data));
+    const child = spawn("/home/rladbsgh/anaconda3/bin/python", ["browserHistory.py"]);
+    console.log(child.pid);
+    process.chdir('..');
 
     child.stdout.on('data', data => {
       if (!childRunning) {
         child.kill("SIGINT");
         kill(child.pid + 1);
       }
-      const dataObject = JSON.parse(data);
-      console.log(dataObject);
-      if (dataObject['suggest?']) {
-        io.emit('suggest', dataObject);
+      const tmp = "" + data;
+      console.log(tmp);
+      if (tmp.substring(0, 4) !== "Log:") {
+        const dataObject = JSON.parse(data);
+        if (dataObject['suggest?']) {
+          console.log("Suggesting!!!");
+          io.emit('suggest', dataObject);
+        }
       }
     });
+
+    child.stderr.on('data', (data) => {
+      console.log("" + data);
+    });
+  });
+
+  socket.on('blacklist', (data) => {
+    const fd = fs.openSync('utils/data/blacklist.txt', 'a+');
+    fs.appendFileSync(fd, data + "\n");
+    const fd2 = fs.openSync('utils/data/reinforce_negative.txt', 'a+');
+    fs.appendFileSync(fd2, data + "\n");
+  });
+
+  socket.on('whitelist', (data) => {
+    const fd = fs.openSync('utils/data/reinforce_positive.txt', 'a+');
+    fs.appendFileSync(fd, data + "\n");
   });
 
   socket.on('disconnect', () => {

@@ -1,0 +1,4 @@
+https://github.com/yukezhu/tensorflow-reinforce/blob/master/run_reinforce_cartpole.py
+https://medium.com/scaleabout/a-gentle-introduction-to-doc2vec-db3e8c0cce5e
+https://my.hackprinceton.com/register
+https://hackprinceton.com/

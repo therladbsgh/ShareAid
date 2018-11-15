@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import openSocket from 'socket.io-client';
 import './style/index.css';
 import './App.css';
@@ -18,22 +17,37 @@ class App extends Component {
     }
 
     this.state.socket.on('suggest', data => {
+      console.log(data);
       if (!this.state.urlSet.has(data.url)) {
         this.state.urlSet.add(data.url);
         const suggestions = this.state.suggestions;
         suggestions.push(data);
+        suggestions.sort((a, b) => {return (b.contentSimilarity * b.reinforceProb[0]) -
+                                           (a.contentSimilarity * a.reinforceProb[0])});
         this.setState({
           suggestions,
         });
       }
     });
 
-    this.incrementCounter = this.incrementCounter.bind(this);
+    this.blacklistLink = this.blacklistLink.bind(this);
+    this.whitelistLink = this.whitelistLink.bind(this);
   }
 
-  incrementCounter() {
-    const counter = (this.state.counter + 1) % this.state.suggestions.length;
-    this.setState({ counter });
+  whitelistLink(post, url) {
+    return () => {
+      this.state.socket.emit('whitelist', url);
+      post.feedback = true;
+      this.setState({});
+    }
+  }
+
+  blacklistLink(post, url) {
+    return () => {
+      this.state.socket.emit('blacklist', url);
+      post.feedback = true;
+      this.setState({});
+    }
   }
 
   startGraphCall() {
@@ -96,40 +110,54 @@ class App extends Component {
   }
 
   renderFinished() {
-    const suggest = this.state.suggestions[this.state.counter];
-    return (
-      <div className="afterGraph">
-        <div className="facebookPost">
-          <div className="facebookHeader">
-            <img src="philip_thumbnail.jpg" alt="profile pic" className="profilePicture" />
-            <div className="headerTextWrapper">
-              <p className="headerMainText"><a className="usernameText">{"Test"}</a> shared a <a href={suggest.url}>link</a>.</p>
-              <p className="headerSubText">Just now · {"Source here"}</p>
-            </div>
-          </div>
-          <a href={suggest.url} className="linkWrapper">
-            <div className="bodyWrapper">
-              <div className="photo">
-                <img src={suggest.image} alt="link" className="linkImage"/>
+    return(
+      <div className="main-body">
+        { this.state.suggestions.map((each) => {
+            return (
+              <div className="afterGraph" key={each.url}>
+                <div className="facebookPost">
+                  <div className="facebookHeader">
+                    <img src="philip_thumbnail.jpg" alt="profile pic" className="profilePicture" />
+                    <div className="headerTextWrapper">
+                      <p className="headerMainText"><a className="usernameText">{"Test"}</a> shared a <a href={each.url}>link</a>.</p>
+                      <p className="headerSubText">Just now · {"Source here"}</p>
+                    </div>
+                  </div>
+                  <a href={each.url} className="linkWrapper">
+                    <div className="bodyWrapper">
+                      <div className="photo">
+                        <img src={each.image} alt="link" className="linkImage"/>
+                      </div>
+                      <div className="linkTextWrapper">
+                        <p className="linkMainText">{each.title}</p>
+                        <p className="linkSubText">{each.subtext}</p>
+                        <p className="linkBaseURL">{"Source here"}</p>
+                      </div>
+                    </div>
+                  </a>
+                  <img className="icons" src="icons.png" alt="icons" />
+                </div>
+                <br/>
+                <div className="optionsWrapper">
+                  <div className={`facebookShare ${each.feedback && "disabled"}`} onClick={this.whitelistLink(each, each.url)}>
+                    <p className="facebookShareText">Share to Facebook</p>
+                  </div>
+                  <div className={`getNewLink ${each.feedback && "disabled"}`} onClick={this.blacklistLink(each, each.url)}>
+                    <p className="getNewLinkText">Don't show this again</p>
+                  </div>
+                  <div>
+                    <p>Content Similarity:</p>
+                    <p>{each.contentSimilarity}</p>
+                    <p>Reinforce Probability:</p>
+                    <p>{each.reinforceProb[0]}</p>
+                    <p>Total Similarity:</p>
+                    <p>{Math.max(0, each.contentSimilarity * each.reinforceProb[0])}</p>
+                  </div>
+                </div>
               </div>
-              <div className="linkTextWrapper">
-                <p className="linkMainText">{suggest.title}</p>
-                <p className="linkSubText">{suggest.subtext}</p>
-                <p className="linkBaseURL">{"Source here"}</p>
-              </div>
-            </div>
-          </a>
-          <img className="icons" src="icons.png" alt="icons" />
-        </div>
-        <br/>
-        <div className="buttonWrapper">
-          <div className="facebookShare">
-            <p className="facebookShareText">Share to Facebook</p>
-          </div>
-          <div className="getNewLink" onClick={this.incrementCounter}>
-            <p className="getNewLinkText">Try a New Link</p>
-          </div>
-        </div>
+            );
+          })
+        }
       </div>
     );
   }
@@ -137,26 +165,32 @@ class App extends Component {
 
 
   render() {
-    if (this.state.suggestions.length > 0) {
-      return this.renderFinished();
-    } else {
-      return (
-        <div>
-          {this.state.status === 'not started' &&
-            this.renderInitial()
-          }
-          {this.state.status === 'fetching' &&
-            this.renderFetching()
-          }
-          {this.state.status === 'awaiting download' &&
-            this.renderAwaitDownload()
-          }
-          {this.state.status === 'analyzing' &&
-            this.renderAnalyzing()
-          }
+    return (
+      <div>
+        <div className="header">
+          <div className="header-left">
+            Shareaid Weblinks
+          </div>
         </div>
-      );
-    }
+        {this.state.suggestions.length > 0 ?
+          this.renderFinished() :
+          <div className="main-body">
+            {this.state.status === 'not started' &&
+              this.renderInitial()
+            }
+            {this.state.status === 'fetching' &&
+              this.renderFetching()
+            }
+            {this.state.status === 'awaiting download' &&
+              this.renderAwaitDownload()
+            }
+            {this.state.status === 'analyzing' &&
+              this.renderAnalyzing()
+            }
+          </div>
+        }
+      </div>
+    );
   }
 }
 

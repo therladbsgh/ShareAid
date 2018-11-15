@@ -27,6 +27,30 @@
   color: black;
 }
 
+.header {
+  height: 42px;
+  width: 100vw;
+  position: fixed;
+  background-color: #4267b2;
+  border-bottom: 1px solid #29487d;
+  color: white;
+  top: 0;
+}
+
+.header-left {
+  padding-left: 17px;
+  margin-top: 13px;
+}
+
+.main-body {
+  padding-top: 50px;
+}
+
+.disabled {
+  cursor: disabled;
+  background-color: rgba(0.5, 0.5, 0.5, 0.5);
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

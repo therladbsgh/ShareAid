@@ -1,9 +1,9 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  background: #fafafa;
+  background: #e9ebee;
 }
 
 .buttonWrapper {
@@ -13,11 +13,15 @@ body {
   text-align: center;
 }
 
+.optionsWrapper {
+  margin: auto;
+  width: 500px;
+  text-align: center;
+}
+
 .facebookGraph, .facebookShare, .getNewLink {
-  display: flex;
   padding: 15px 0;
   width: 150px;
-  display: flex;
   border-radius: 15px;
   margin: auto;
   margin-bottom: 25px;
@@ -69,6 +73,8 @@ body {
   border: 1px solid #efefef;
   border-radius: 5px;
   background: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .photo {
@@ -101,7 +107,7 @@ body {
 }
 
 .usernameText{
-  color: #365899; 
+  color: #365899;
   font-weight: 600;
 }
 
@@ -142,4 +148,10 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+}
+
+.afterGraph {
+  display: flex;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }

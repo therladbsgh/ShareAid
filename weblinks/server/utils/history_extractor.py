@@ -28,10 +28,16 @@ def extract_chrome():
         raise ValueError('OS not supported')
 
     # Connects via SQLite
-    copyfile(historyPath, './ChromeHistory')
-    conn = sqlite3.connect('./ChromeHistory')
+    Path('data/').mkdir(parents=True, exist_ok=True)
+    copyfile(historyPath, 'data/ChromeHistory')
+    conn = sqlite3.connect('data/ChromeHistory')
     c = conn.cursor()
-    c.execute("SELECT urls.url, urls.title FROM urls, visits WHERE urls.id = visits.url;")
+    c.execute("SELECT urls.url, urls.title, visits.visit_duration FROM urls, visits WHERE urls.id = visits.url ORDER BY visits.visit_time DESC;")
     results = c.fetchall()
     c.close()
     return results
+
+
+# aa = extract_chrome()
+# for each in aa:
+#     print(each)
