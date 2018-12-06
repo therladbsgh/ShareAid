@@ -33,7 +33,7 @@ body {
 }
 
 .facebookGraph, .facebookShare {
-  background: #365899;
+  background: #4267B2;
 }
 
 .getNewLink {
@@ -93,6 +93,12 @@ body {
 .facebookHeader {
   display: flex;
   padding: 6px;
+  align-items: center;
+}
+
+.facebookCaption {
+  padding-left: 6px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #efefef;
   align-items: center;
 }

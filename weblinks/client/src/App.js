@@ -61,7 +61,7 @@ class App extends Component {
     return (
       <div className="buttonWrapper">
         <div className="facebookGraph" onClick={() => this.startGraphCall()}>
-          <p className="facebookGraphText">Call the Graph API</p>
+          <p className="facebookGraphText">Login to Facebook</p>
         </div>
       </div>
     );
@@ -120,8 +120,11 @@ class App extends Component {
                     <img src="philip_thumbnail.jpg" alt="profile pic" className="profilePicture" />
                     <div className="headerTextWrapper">
                       <p className="headerMainText"><a className="usernameText">{"Test"}</a> shared a <a href={each.url}>link</a>.</p>
-                      <p className="headerSubText">Just now · {"Source here"}</p>
+                      <p className="headerSubText">Just now · Global</p>
                     </div>
+                  </div>
+                  <div className="facebookCaption">
+                    {each.text}
                   </div>
                   <a href={each.url} className="linkWrapper">
                     <div className="bodyWrapper">
@@ -131,7 +134,7 @@ class App extends Component {
                       <div className="linkTextWrapper">
                         <p className="linkMainText">{each.title}</p>
                         <p className="linkSubText">{each.subtext}</p>
-                        <p className="linkBaseURL">{"Source here"}</p>
+                        <p className="linkBaseURL">{each.url}</p>
                       </div>
                     </div>
                   </a>

@@ -1,9 +1,3 @@
-import heapq
+import numpy as np
 
-li = [1, 3, 5, 7]
-heapq.heapify(li)
-print(li)
-heapq.heappush(li, 9)
-a = heapq.heappop(li)
-print(a)
-print(li)
+print(np.random.choice(2, 1, [0.4, 0.6]))

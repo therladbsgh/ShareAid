@@ -1,0 +1,55 @@
+1544088869323	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.uUSJMmahs82q"
+*** You are running in headless mode.
+1544088869598	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1544088869599	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1544088870939	Marionette	INFO	Listening on port 44707
+1544088871029	Marionette	WARN	TLS certificate errors will be ignored for this session
+1544088878382	Marionette	INFO	Stopped listening on port 44707
+[Parent 16402, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-bjs2DV/firefox-64.0~b3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1544089151353	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LZHPbR1OvUJh"
+*** You are running in headless mode.
+1544089151651	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1544089151651	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1544089152993	Marionette	INFO	Listening on port 42429
+1544089153058	Marionette	WARN	TLS certificate errors will be ignored for this session
+1544089159419	Marionette	INFO	Stopped listening on port 42429
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x580029,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+[Child 17763, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bjs2DV/firefox-64.0~b3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 17587, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-bjs2DV/firefox-64.0~b3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1544089239695	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0lnj5z2BokGr"
+*** You are running in headless mode.
+1544089239969	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1544089239970	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1544089241287	Marionette	INFO	Listening on port 37019
+1544089241313	Marionette	WARN	TLS certificate errors will be ignored for this session
+1544089247768	Marionette	INFO	Stopped listening on port 37019
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x580029,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 18059, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-bjs2DV/firefox-64.0~b3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1544089402032	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.crmY5tqQ50tS"
+*** You are running in headless mode.
+1544089402336	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1544089402337	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1544089403681	Marionette	INFO	Listening on port 35571
+1544089403741	Marionette	WARN	TLS certificate errors will be ignored for this session
+1544089410087	Marionette	INFO	Stopped listening on port 35571
+[Parent 18697, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-bjs2DV/firefox-64.0~b3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1544089458063	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.xmG0vLxFQu37"
+*** You are running in headless mode.
+1544089458385	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1544089458385	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1544089459723	Marionette	INFO	Listening on port 39247
+1544089459776	Marionette	WARN	TLS certificate errors will be ignored for this session
+1544089466121	Marionette	INFO	Stopped listening on port 39247
+[Parent 19248, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-bjs2DV/firefox-64.0~b3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1544089726565	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.czOM8WtpVQiM"
+*** You are running in headless mode.
+1544089726834	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1544089726835	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1544089728206	Marionette	INFO	Listening on port 46401
+1544089728271	Marionette	WARN	TLS certificate errors will be ignored for this session
+1544089735909	Marionette	INFO	Stopped listening on port 46401
+[Parent 20256, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-bjs2DV/firefox-64.0~b3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363

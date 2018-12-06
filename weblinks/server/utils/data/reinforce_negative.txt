@@ -1,6 +1,0 @@
-https://groups.google.com/a/tensorflow.org/forum/#!topic/discuss/uSujHISg44U
-https://www.twitch.tv/mister903/videos/all
-https://colab.research.google.com/github/tensorflow/hub/blob/r0.1/examples/colab/semantic_similarity_with_tf_hub_universal_encoder.ipynb#scrollTo=Q8F4LNGFqOiq
-https://gist.github.com/jainanchit51/a2b8d119d821285f031739be69798a1e
-https://stackoverflow.com/questions/25311541/how-to-vertically-align-text-inside-a-flexbox
-https://groups.google.com/a/tensorflow.org/d/topic/discuss/uSujHISg44U
