@@ -2,3 +2,9 @@
 weblinks/server/utils/data/*
 weblinks/server/utils/models/*
 weblinks/server/utils/data/
+
+weblinks/src/server/env.json
+weblinks/src/server/env_save.json
+weblinks/src/server/node_modules
+weblinks/src/server/utils/models
+*/__pycache__/
