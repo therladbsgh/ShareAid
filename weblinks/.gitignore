@@ -18,6 +18,12 @@
 .env.test.local
 .env.production.local
 
+src/server/env.json
+src/server/env_save.json
+src/server/node_modules
+src/server/utils/models
+*/__pycache__/
+
 # photos
 photos/
 
