@@ -1,6 +1,7 @@
 {
     "access_token": "",
     "fb_client_id": 0,
+    "python_path": "",
     "initial_setup": false,
     "server_address": "http://localhost:1337",
     "use_sample_data": false

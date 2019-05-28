@@ -91,6 +91,12 @@ def fetch_data():
     return jsonify(data=data)
 
 
+@app.route('/test', methods=['GET'])
+def test():
+    logging.info("Fetching data...")
+    return jsonify(data={"test": True})
+
+
 if __name__ == '__main__':
     app.run(port=1337)
 

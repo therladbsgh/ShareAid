@@ -7,8 +7,11 @@ const url = require('url')
 
 const controller = require('./controller');
 
+var Env = JSON.parse(fs.readFileSync(`${__dirname}/env.json`));
+
 // Initialize server
 const options = {
+    pythonPath: Env.python_path,
     scriptPath: path.join(__dirname, 'server'),
     pythonOptions: ['-u'],
 };

@@ -70,7 +70,7 @@ def extract_chrome_initial():
     elif platform == "darwin":
         # OS X browser history
         historyPath = (os.path.join(Path.home(), 'Library/Application Support/' +
-                                    'Google/Chrome/Default/Preferences'))
+                                    'Google/Chrome/Default/History'))
     elif platform == "win32":
         # Windows browser history
         raise ValueError('OS not supported')
